@@ -1,0 +1,24 @@
+{
+    "name": "bunta/translations",
+    "description": "Translation trait",
+    "keywords": ["translation", "laravel"],
+    "homepage": "https://github.com/buntan/translations",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artur Anyszek",
+            "email": "a.anyszek@linux.pl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Bunta\\Translations\\": "src/",
+            "Bunta\\Translations\\Models\\": "src/models/"
+        },
+        "classmap": [
+            "tests"
+        ]
+    }
+}
