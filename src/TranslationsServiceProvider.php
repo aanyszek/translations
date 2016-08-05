@@ -17,11 +17,12 @@ class TranslationsServiceProvider extends ServiceProvider {
         $this->publishes([
             __DIR__ . '/config' => config_path()
                 ], 'config');
-        //dump('TranslationServiceprovider boot');
     }
 
     public function register() {
-        //dump('TranslationServiceprovider register');
+          $this->mergeConfigFrom(
+                __DIR__ . '/config/translations.php', 'translations'
+        );
     }
 
 }

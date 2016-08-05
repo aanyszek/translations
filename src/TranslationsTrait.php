@@ -26,7 +26,7 @@ trait TranslationsTrait {
 
     public function Translations() {
 
-        $relation = $this->hasMany('Bunta\Translations\Models\Translation', 'foreign_id', 'id')
+        $relation = $this->hasMany(config('translations.TranslationModel'), 'foreign_id', 'id')
                 ->where('table', $this->table);
 
         return $relation;
