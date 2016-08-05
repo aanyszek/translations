@@ -21,7 +21,7 @@
     composer du
     php artisan optimize 
     php artisan vendor:publish
-    php artisan migate
+    php artisan migrate
 # Usage 
 
 ## Access to right translate 
@@ -31,7 +31,7 @@
 ## Access to all translates
 
     @foreach(Config::get('translations.locales') as $lang)
-        {!! Form::text("nameVirtualAttributeToTranslate[$lang]",$groupe->translation('nameVirtualAttributeToTranslate',$lang), ['class' => 'form-control', 'required' => 'required']) !!}
+        {!! Form::text("nameVirtualAttributeToTranslate[$lang]",$model->translation('nameVirtualAttributeToTranslate',$lang)) !!}
     @endforeach 
 
 ## save translate
